@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A8A388E0-16C8-4E3C-8CF6-3EDF9A69B4E2}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>PaperTool</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>PaperTool</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchDebug>True</MtouchDebug>
+    <MtouchProfiling>True</MtouchProfiling>
+    <MtouchLink>None</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>True</MtouchDebug>
+    <MtouchProfiling>True</MtouchProfiling>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <BuildIpa>True</BuildIpa>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.monotouch">
+      <HintPath>zxing.monotouch.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="BtcModel\Address.cs" />
+    <Compile Include="BtcModel\Bip38Intermediate.cs" />
+    <Compile Include="BtcModel\Bip38KeyPair.cs" />
+    <Compile Include="BtcModel\Bitcoin.cs" />
+    <Compile Include="BtcModel\EncryptedKeyPair.cs" />
+    <Compile Include="BtcModel\EscrowCode.cs" />
+    <Compile Include="BtcModel\ExtraEntropy.cs" />
+    <Compile Include="BtcModel\KeyCollection.cs" />
+    <Compile Include="BtcModel\KeyCollectionItem.cs" />
+    <Compile Include="BtcModel\KeyPair.cs" />
+    <Compile Include="BtcModel\MiniKeyPair.cs" />
+    <Compile Include="BtcModel\MofN.cs" />
+    <Compile Include="BtcModel\PassphraseKeyPair.cs" />
+    <Compile Include="BtcModel\PublicKey.cs" />
+    <Compile Include="BtcModel\ShaPassphraseKeyPair.cs" />
+    <Compile Include="BtcModel\StringInterpreter.cs" />
+    <Compile Include="CryptSharp\Helper.cs" />
+    <Compile Include="CryptSharp\Pbkdf2.cs" />
+    <Compile Include="CryptSharp\SCrypt.cs" />
+    <Compile Include="CryptSharp\Salsa20Core.cs" />
+    <Compile Include="DecryptionToolViewController.cs" />
+    <Compile Include="DecryptionToolViewController.designer.cs">
+      <DependentUpon>DecryptionToolViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PassphraseSetterViewController.cs" />
+    <Compile Include="PassphraseSetterViewController.designer.cs">
+      <DependentUpon>PassphraseSetterViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaperToolTabBarController.cs" />
+    <Compile Include="PaperToolTabBarController.designer.cs">
+      <DependentUpon>PaperToolTabBarController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderingToolViewController.cs" />
+    <Compile Include="OrderingToolViewController.designer.cs">
+      <DependentUpon>OrderingToolViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BtcModel\Base58.cs" />
+    <Compile Include="BtcModel\Base58CheckString.cs" />
+    <Compile Include="BtcModel\Bip38Confirmation.cs" />
+    <Compile Include="BtcModel\Bip38Base.cs" />
+    <Compile Include="DecryptionDetailsViewController.cs" />
+    <Compile Include="DecryptionDetailsViewController.designer.cs">
+      <DependentUpon>DecryptionDetailsViewController.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="MainStoryboard.storyboard" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="BtcModel\" />
+    <Folder Include="CryptSharp\" />
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\key-white.png" />
+    <Content Include="Images\key-white%402x.png" />
+    <Content Include="Images\key.png" />
+    <Content Include="Images\key%402x.png" />
+    <Content Include="Images\keyboard-white.png" />
+    <Content Include="Images\keyboard-white%402x.png" />
+    <Content Include="Images\keyboard.png" />
+    <Content Include="Images\keyboard%402x.png" />
+    <Content Include="Images\keyhole-white.png" />
+    <Content Include="Images\keyhole-white%402x.png" />
+    <Content Include="Images\keyhole.png" />
+    <Content Include="Images\keyhole%402x.png" />
+    <Content Include="Images\keypad-white.png" />
+    <Content Include="Images\keypad-white%402x.png" />
+    <Content Include="Images\keypad.png" />
+    <Content Include="Images\keypad%402x.png" />
+    <Content Include="Images\pan-white.png" />
+    <Content Include="Images\pan-white%402x.png" />
+    <Content Include="Images\pant-white.png" />
+    <Content Include="Images\pant-white%402x.png" />
+    <Content Include="Images\printer-white.png" />
+    <Content Include="Images\printer-white%402x.png" />
+    <Content Include="Images\printer.png" />
+    <Content Include="Images\printer%402x.png" />
+    <Content Include="Images\coinstack1btc.jpg" />
+    <Content Include="Images\holo114.png" />
+    <Content Include="Images\holo57.png" />
+    <Content Include="Images\holo72.png" />
+    <Content Include="Images\bigvires.png" />
+    <Content Include="Images\silverback.png" />
+    <Content Include="Images\silverback640.png" />
+    <Content Include="Images\silverback6404.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+  </ItemGroup>
+</Project>

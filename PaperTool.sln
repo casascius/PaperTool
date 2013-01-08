@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaperTool", "PaperTool\PaperTool.csproj", "{A8A388E0-16C8-4E3C-8CF6-3EDF9A69B4E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zxing.monotouch", "..\ZXing.Net\zxing.monotouch.csproj", "{BD0FA561-182D-4A89-BAA7-228693B07862}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+		Ad-Hoc|iPhone = Ad-Hoc|iPhone
+		AppStore|iPhone = AppStore|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8A388E0-16C8-4E3C-8CF6-3EDF9A69B4E2}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{A8A388E0-16C8-4E3C-8CF6-3EDF9A69B4E2}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{A8A388E0-16C8-4E3C-8CF6-3EDF9A69B4E2}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{A8A388E0-16C8-4E3C-8CF6-3EDF9A69B4E2}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{A8A388E0-16C8-4E3C-8CF6-3EDF9A69B4E2}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{A8A388E0-16C8-4E3C-8CF6-3EDF9A69B4E2}.Debug|iPhone.Build.0 = Debug|iPhone
+		{A8A388E0-16C8-4E3C-8CF6-3EDF9A69B4E2}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{A8A388E0-16C8-4E3C-8CF6-3EDF9A69B4E2}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{A8A388E0-16C8-4E3C-8CF6-3EDF9A69B4E2}.Release|iPhone.ActiveCfg = Release|iPhone
+		{A8A388E0-16C8-4E3C-8CF6-3EDF9A69B4E2}.Release|iPhone.Build.0 = Release|iPhone
+		{A8A388E0-16C8-4E3C-8CF6-3EDF9A69B4E2}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{A8A388E0-16C8-4E3C-8CF6-3EDF9A69B4E2}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{BD0FA561-182D-4A89-BAA7-228693B07862}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
+		{BD0FA561-182D-4A89-BAA7-228693B07862}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
+		{BD0FA561-182D-4A89-BAA7-228693B07862}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
+		{BD0FA561-182D-4A89-BAA7-228693B07862}.AppStore|iPhone.Build.0 = Debug|Any CPU
+		{BD0FA561-182D-4A89-BAA7-228693B07862}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{BD0FA561-182D-4A89-BAA7-228693B07862}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{BD0FA561-182D-4A89-BAA7-228693B07862}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{BD0FA561-182D-4A89-BAA7-228693B07862}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{BD0FA561-182D-4A89-BAA7-228693B07862}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{BD0FA561-182D-4A89-BAA7-228693B07862}.Release|iPhone.Build.0 = Release|Any CPU
+		{BD0FA561-182D-4A89-BAA7-228693B07862}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{BD0FA561-182D-4A89-BAA7-228693B07862}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = PaperTool\PaperTool.csproj
+	EndGlobalSection
+EndGlobal
